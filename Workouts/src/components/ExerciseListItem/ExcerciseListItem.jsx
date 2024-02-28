@@ -6,7 +6,7 @@ export default function ExerciseListItem({ item }) {
     <View style={styles.exerciseContainer}>
       <Text style={styles.exerciseName}>{item.name}</Text>
       <Text style={styles.muscleName}>
-        {item.muscle.toUpperCase()} | {item.equipment.toUpperCase()}
+        <Text style={styles.subTitle}>{item.muscle}</Text> | <Text style={styles.subTitle}>{item.equipment}</Text>
       </Text>
     </View>
   );
@@ -31,6 +31,9 @@ const styles = StyleSheet.create({
     },
     muscleName: {
       color: "dimgray",
+    },
+    subTitle: {
+        textTransform: 'capitalize',
     },
   });
   
